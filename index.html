@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html</title>
+    <style>
+      .ol {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .ul {
+        display: flex;
+        justify-content: space-evenly;
+        margin-right: 400px;
+      }
+      table,
+      tr,
+      th,
+      td {
+        border: 2px solid brown;
+        border-collapse: collapse;
+        padding: 10px;
+        margin: auto;
+        text-align: center;
+      }
+      input {
+        margin-top: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>List</h1>
+    <!-- Order list -->
+    <div class="ol">
+      <h2>Order list</h2>
+      <ol type="1">
+        <li>HTML</li>
+        <li>css</li>
+        <li>Java Script</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+      </ol>
+
+      <ol type="A">
+        <li>HTML</li>
+        <li>css</li>
+        <li>Java Script</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+      </ol>
+
+      <ol type="a">
+        <li>HTML</li>
+        <li>css</li>
+        <li>Java Script</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+      </ol>
+
+      <ol type="I">
+        <li>HTML</li>
+        <li>css</li>
+        <li>Java Script</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+      </ol>
+
+      <ol type="i">
+      
+      
+        <li>HTML</li>
+        <li>css</li>
+        <li>Java Script</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+      </ol>
+    </div>
+    <div class="ul">
+      <!-- unordered list -->
+      <h2>Unordered list</h2>
+      <ul type="disc">
+        <li>HTML</li>
+        <li>css</li>
+        <li>Java Script</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+      </ul>
+
+      <ul type="Circle">
+        <li>HTML</li>
+        <li>css</li>
+        <li>Java Script</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+      </ul>
+      <ul type="square">
+      
+      
+        <li>HTML</li>
+        <li>css</li>
+        <li>Java Script</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+      </ul>
+    </div>
+
+    <h2>Description List</h2>
+    <dl>
+      <dt>Lorem</dt>
+      <dd style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+        itaque eos! Alias dicta reiciendis tempora! Eum porro dignissimos fuga
+        eos facilis autem nihil, fugiat aliquam aperiam necessitatibus eaque
+        repudiandae ad assumenda alias neque dicta dolores velit molestias,
+        similique nemo iste pariatur provident! Harum nihil iste possimus velit
+        obcaecati omnis qui itaque rem, suscipit blanditiis fugiat quis illum!
+        Ea repellat, debitis dolore culpa laudantium amet assumenda facere
+        aspernatur nobis natus cum, hic rem ratione ullam porro, explicabo
+        voluptas necessitatibus similique blanditiis laborum. Dolores impedit
+        fugit recusandae! Sequi, itaque libero cum eum vitae eveniet labore
+        corporis alias non, dolorum quasi nostrum velit.
+      </dd>
+    </dl>
+
+    <!-- Table -->
+
+    <table class="table">
+      <h1>Table</h1>
+      <caption>
+        <h2>Calendar</h2>
+      </caption>
+      <tr>
+   <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+ <td>9</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>29</td>
+        <td>30</td>
+        <td>31</td>
+      </tr>
+    </table>
+
+    <!-- Form -->
+    <h2>Form -</h2>
+    <fieldset style="height: 650px; width: 350px; margin: auto">
+      <legend>Rgestration</legend>
+      <form action="" autocomplete="on" style="text-align: center">
+        <label for="">Name :</label>
+        <input type="text" name="" id="" placeholder="ex.Maruthu D" autofocus />
+        <br />
+        <label for="">DOB :</label>
+        <input type="date" min="2000-01-01" max="2025-12-30" /><br />
+    <label for="">Email :</label>
+        <input type="email" name="" id="" /><br />
+        <label for="">Password :</label>
+      <input type="password" /><br />
+    <label for="">Contact :</label>
+       <input type="tel" name="" id="" required /><br />
+       <label for="">Gender</label>
+        <input type="radio" name="gen" />Male
+        <input type="radio" name="gen" />Female
+      <input type="radio" name="gen" disabled />Others <br />
+      <label for="">Address</label>
+        <textarea name="" id=""></textarea><br />
+        <label for="">Skill</label>
+        <input type="range" /><br />
+        <label for="">I agree</label>
+        <input type="checkbox" /><br />
+        <label for="">Color</label>
+        <input type="color" /><br />
+        <label for="">Sclect</label>
+        <select name="" id="">
+          <optgroup label="Backend">
+            <option value="" hidden>select your skill</option>
+            <option value="1">c</option>
+            <option value="2">c++</option>
+            <option value="3">java</option>
+            <option value="4">Python</option>
+          </optgroup>
+          <optgroup label="Frontend">
+            <option value="1">html</option>
+            <option value="2">css</option>
+            <option value="3">react</option>
+            <option value="4">sql</option>
+        </optgroup></select
+        ><br />
+        <label for="">state</label>
+        <input list="dist" />
+        <datalist id="dist">
+          <option value="Tamil nadu"></option>
+ <option value="Karnataka"></option>
+          <option value="Kerala"></option>
+          <option value="Goa"></option>
+        </datalist>
+        <br />
+        <label for="">Resume</label>
+        <input type="file" name="" id="" accept=".pdf" />
+        <input type="submit" />
+      </form>
+    </fieldset>
+  </body>
+</html>

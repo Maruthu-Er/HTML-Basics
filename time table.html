@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time table</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+       body{
+        font-family: "Genos", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 20px;
+        font-style: normal;
+       }
+      td,
+      th {
+        border: 1px solid black;
+        padding: 10px;
+      }
+      table {
+        margin: auto;
+        text-align: center;
+        border-collapse: collapse;
+      }
+      h2,h4{
+        width:fit-content;
+        margin:15px auto;
+      }
+      h1,th,h2{
+        color: #6C3BAA;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        <h1>Time Table</h1>
+      </caption>
+      <tr>
+        <th rowspan="2">Hour Time / Day</th>
+        <th>1</th>
+        <th>2</th>
+        <td rowspan="2">11:10AM to 11:20AM</td>
+        <th>3</th>
+        <th>4</th>
+        <td rowspan="2">01:10PM to 02:00PM</td>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+      </tr>
+      <tr>
+        <td>09.20AM to 10.15AM</td>
+        <td>10:15 AM to <br />11:10AM</td>
+        <td>11:20AM to 12:15PM</td>
+        <td>12:15 to 01:10PM</td>
+        <td>02:00PM to 02:50PM</td>
+        <td>02:50PM to 03:40PM</td>
+        <td>03:40PM to 4:30PM</td>
+      </tr>
+      <tr>
+        <th>Monday</th>
+        <td>NS</td>
+        <td><----</td>
+        <td rowspan="5">Break</td>
+        <td colspan="2">CCL ----></td>
+        <td rowspan="5">Lunch Break</td>
+        <td>NS</td>
+        <td>IRT</td>
+        <td>CC</td>
+      </tr>
+      <tr>
+        <th>Tuesday</th>
+        <td>CC</td>
+        <td>NS</td>
+        <td>CC</td>
+        <td>IRT</td>
+        <td>NS</td>
+        <td colspan="2">IRT</td>
+      </tr>
+      <tr>
+        <th>Wednesday</th>
+        <td>NS</td>
+        <td>CC</td>
+        <td>CC</td>
+        <td>NS</td>
+        <td colspan="3">Presentation Skills</td>
+      </tr>
+      <tr>
+        <th>Thrusday</th>
+        <td>IRT</td>
+        <td>NS</td>
+        <td>IRT</td>
+        <td>CC</td>
+        <td>CC</td>
+        <td>LIBRARY</td>
+        <td>NS</td>
+      </tr>
+      <tr>
+        <th>Friday</th>
+        <td>NS</td>
+        <td>IRT</td>
+        <td>CC</td>
+        <td>IRT</td>
+        <td>CC</td>
+        <td>IRT</td>
+        <td>CC</td>
+      </tr>
+    </table>
+    <div class="ct">
+        <h2>Cours Title</h2>
+        <h4>NS - Network Security</h4>
+        <h4>CC - Cloud Computing </h4>
+        <h4>IRT - Information Retrieval Techniques</h4>
+        <h4>CCL - Cloud Computing</h4>
+    </div>
+  </body>
+</html>

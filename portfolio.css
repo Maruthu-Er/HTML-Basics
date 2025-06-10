@@ -231,7 +231,10 @@ a:hover::before {
   height: 400px;
   object-fit: cover;
   margin-left: 90px;
-  object-position: 0px 4px;
+  object-position: 0px 0.2px;
+  border-radius: 20px;
+  border-top: 6px solid #754ef9;
+   border-bottom: 6px solid #754ef9;
   /* transform: rotate(3deg); */
 }
 .second-space img:hover {

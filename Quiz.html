@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz App with Next Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0A202;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .quiz-container {
+            background-color: #202C59;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            width: 350px;
+            text-align: center;
+        }
+        .question {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        .option {
+            display:block;
+            margin: 10px 0px 10px 50px;
+            padding: 10px;
+            width: 250px;
+            background-color: #e0e0e0;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+        .option.selected {
+            background-color: #F0A202;
+        }
+        .next-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            
+        }
+        .next-btn:hover {
+            background-color: #45a049;
+        }
+        .result {
+            font-size: 18px;
+            margin-top: 20px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container" id="quiz">
+    <div id="question" class="question">Loading...</div>
+    <button class="option" onclick="selectOption(0)" id="option0"></button>
+    <button class="option" onclick="selectOption(1)" id="option1"></button>
+    <button class="option" onclick="selectOption(2)" id="option2"></button>
+    <button class="option" onclick="selectOption(3)" id="option3"></button>
+    <button class="next-btn" onclick="nextQuestion()">Next</button>
+    <div id="result" class="result"></div>
+</div>
+
+<script>
+    const quizData = [
+        {
+            question: "What is the capital of France?",
+            options: ["Berlin", "Paris", "London", "Madrid"],
+            answer: 1
+        },
+        {
+            question: "What is 2 + 2?",
+            options: ["3", "4", "5", "6"],
+            answer: 1
+        },
+        {
+            question: "Which language is used to build web pages?",
+            options: ["Python", "HTML", "Java", "C++"],
+            answer: 1
+        }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+    let selectedOption = null;
+
+    // Load the current question and options
+    function loadQuestion() {
+        let q = quizData[currentQuestion];
+        document.getElementById('question').textContent = q.question;
+        q.options.forEach((option, index) => {
+            let btn = document.getElementById('option' + index);
+            btn.textContent = option;
+            btn.classList.remove('selected'); // Remove previous selection
+        });
+        selectedOption = null; // Reset selection
+        // document.getElementById('result').textContent = ''; // Clear previous result
+    }
+
+    // Highlight selected option
+    function selectOption(index) {
+        selectedOption = index;
+        // Remove selection from all options
+        for (let i = 0; i < 4; i++) {
+            document.getElementById('option' + i).classList.remove('selected');
+        }
+        // Highlight selected option
+        document.getElementById('option' + index).classList.add('selected');
+    }
+
+    // Move to next question
+    function nextQuestion() {
+        if (selectedOption === null) {
+            alert('Please select an option before continuing!');
+            return;
+        }
+
+        if (selectedOption === quizData[currentQuestion].answer) {
+            score++;
+        }
+
+        currentQuestion++;
+
+        if (currentQuestion < quizData.length) {
+            loadQuestion();
+        } else {
+            document.getElementById('quiz').innerHTML = `<h2>Your Score: ${score} / ${quizData.length}</h2>`;
+        }
+    }
+
+    loadQuestion();
+</script>
+
+</body>
+</html>
